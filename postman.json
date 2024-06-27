@@ -1,0 +1,145 @@
+{
+    "info": {
+      "name": "Online Shop API",
+      "description": "API for Online Shop using Express.js",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get All Products",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/api/products",
+            "host": [
+              "{{base_url}}"
+            ],
+            "path": [
+              "api",
+              "products"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Create Product",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Sample Product\",\n    \"price\": 100,\n    \"description\": \"This is a sample product\",\n    \"category\": \"Sample Category\",\n    \"stock\": 10\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/api/products",
+            "host": [
+              "{{base_url}}"
+            ],
+            "path": [
+              "api",
+              "products"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Product By ID",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/api/products/:id",
+            "host": [
+              "{{base_url}}"
+            ],
+            "path": [
+              "api",
+              "products",
+              ":id"
+            ],
+            "variable": [
+              {
+                "key": "id",
+                "value": "60b8d2955c5d3c001c8e4d2b"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Update Product",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Updated Product\",\n    \"price\": 150,\n    \"description\": \"This is an updated product\",\n    \"category\": \"Updated Category\",\n    \"stock\": 5\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/api/products/:id",
+            "host": [
+              "{{base_url}}"
+            ],
+            "path": [
+              "api",
+              "products",
+              ":id"
+            ],
+            "variable": [
+              {
+                "key": "id",
+                "value": "60b8d2955c5d3c001c8e4d2b"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Delete Product",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/api/products/:id",
+            "host": [
+              "{{base_url}}"
+            ],
+            "path": [
+              "api",
+              "products",
+              ":id"
+            ],
+            "variable": [
+              {
+                "key": "id",
+                "value": "60b8d2955c5d3c001c8e4d2b"
+              }
+            ]
+          }
+        },
+        "response": []
+      }
+    ],
+    "variable": [
+      {
+        "key": "base_url",
+        "value": "http://localhost:5000"
+      }
+    ]
+  }
+  
